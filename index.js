@@ -38,7 +38,7 @@ async function get_meme(){
                     // Favourite button
                     let btn_2=document.createElement("button");
                     btn_2.innerHTML="Favourite";
-                    btn_1.className="favourite";
+                    btn_2.className="favourite";
                     div.appendChild(btn_2);
 
         
@@ -56,3 +56,12 @@ async function get_meme(){
 }
 
 get_meme();
+
+let more = document.createElement('button')
+more.innerHTML = "Load More"
+more.className = "load"
+
+document.getElementById("main").appendChild(more);
+more.addEventListener('click',function(){
+    get_meme();
+})
