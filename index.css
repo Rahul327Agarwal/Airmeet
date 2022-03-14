@@ -5,8 +5,8 @@
 .image{
     width: 250px;
     height: 200px;
-    /* margin: 2%; */
     padding: 5px;
+    border: 1px solid red;
 }
 
 .my_div{
@@ -16,5 +16,11 @@
 }
 
 #my_input{
-    border: 2px solid red;
+    /* border: 2px solid red; */
+}
+
+span{
+    /* padding: 2px; */
+    /* border: 2px solid black; */
+    cursor: pointer;
 }
