@@ -22,33 +22,54 @@ async function get_meme(){
 
             div.append(img,br,input);
 
+            // let btn_1=document.createElement("button");
+            // btn_1.className="delete";
+            // btn_1.innerHTML="Delete";
+            // div.appendChild(btn_1);
+            // btn_1.style.display="none";
+
+            // btn_1.addEventListener('click',function()
+            // {
+            //     this.parentElement.style.display = 'none';;
+            // })
+
             input.addEventListener('click',function(){
                 if(this.checked){
                     this.parentElement.style.backgroundColor = "blue";
-               
-                    // Delete button 
+
+                    //this.parentElement.getElementsByClassName("delete")[0].style.display="block";
+                    console.log(this.parentElement.getElementsByClassName("delete")[0]);
+                    if(this.parentElement.getElementsByClassName("delete")[0]===undefined)
+                    {
+                    //Delete button 
                     let btn_1=document.createElement("button");
                     btn_1.className="delete";
                     btn_1.innerHTML="Delete";
                     div.appendChild(btn_1);
+
                     btn_1.addEventListener('click',function(){
                         this.parentElement.style.display = 'none';;
                     }) 
                     
-                    // Favourite button
+                    //Favourite button
                     let btn_2=document.createElement("button");
                     btn_2.innerHTML="Favourite";
                     btn_2.className="favourite";
                     div.appendChild(btn_2);
-
-        
-                    span.addEventListener('click',function(){
-                        this.parentElement.style.display = 'none';;
-                    })   
+                }
+                else
+                {
+                    this.parentElement.getElementsByClassName("delete")[0].style.display="inline";
+                    this.parentElement.getElementsByClassName("favourite")[0].style.display="inline";
+                }
+  
                 }
                 
                 else{
-                    this.parentElement.style.backgroundColor = "white"
+                    this.parentElement.style.backgroundColor = "white";
+                    console.log(this.parentElement);
+                    this.parentElement.getElementsByClassName("delete")[0].style.display="none";
+                    this.parentElement.getElementsByClassName("favourite")[0].style.display="none";
                 }
             })
         } 
@@ -57,9 +78,9 @@ async function get_meme(){
 
 get_meme();
 
-let more = document.createElement('button')
-more.innerHTML = "Load More"
-more.className = "load"
+let more = document.createElement('button');
+more.innerHTML = "Load More";
+more.className = "load";
 
 document.getElementById("main").appendChild(more);
 more.addEventListener('click',function(){

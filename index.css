@@ -11,7 +11,7 @@
 .my_div{
     border: 2px solid black;
     float: right;
-    margin: 1%;
+    /* margin: 1%; */
 }
 
 .delete
@@ -28,4 +28,15 @@
 {
     width:100px;;
     margin-bottom: 30px;
+    justify-content: space-evenly;
+    margin: 1%;
+}
+
+.load{
+    width: 80%;
+    height: 50px;
+    margin: 20px;
+    margin-left: 10%;
+    border: 2px solid black;
+    cursor: pointer;
 }
