@@ -1,0 +1,23 @@
+.image {
+    width: 250px;
+    height: 200px;
+    padding: 5px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px black;
+    margin: 1%;
+    border-radius: 10px;
+  }
+  #root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    animation: shine 0.5s alternate infinite;
+  }
+  @keyframes shine {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(10px);
+    }
+  }
