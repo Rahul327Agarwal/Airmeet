@@ -1,3 +1,5 @@
+localStorage.clear();
+
 async function get_meme() {
     const response = await fetch("https://www.reddit.com/r/memes.json");
     const body = await response.json();
