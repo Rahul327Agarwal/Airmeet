@@ -1,5 +1,3 @@
-const upper=document.getElementById("upper");
-
 async function get_meme(){
     const response=await fetch("https://www.reddit.com/r/memes.json");
     const body=await response.json();
@@ -25,12 +23,23 @@ async function get_meme(){
             input.addEventListener('click',function(){
                 if(this.checked){
                     this.parentElement.style.backgroundColor = "blue"
-                    var span = document.createElement('span');
-                    var text = document.createTextNode("\u00D7");
-                    span.className = "close";
+                    // var span = document.createElement('span');
+                    // var text = document.createTextNode("\u00D7");
+                    // span.className = "close";
         
-                    span.appendChild(text);
-                    div.appendChild(span);
+                    // span.appendChild(text);
+                    // div.appendChild(span);
+               
+                    // Delete button 
+                    let btn_1=document.createElement("button");
+                    btn_1.innerHTML="Delete";
+                    div.appendChild(btn_1);
+                    
+                    // Favourite button
+                    let btn_2=document.createElement("button");
+                    btn_2.innerHTML="Favourite";
+                    div.appendChild(btn_2);
+
         
                     span.addEventListener('click',function(){
                         this.parentElement.style.display = 'none';;
