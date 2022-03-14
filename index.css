@@ -14,12 +14,18 @@
     margin: 1%;
 }
 
-#my_input{
-    /* border: 2px solid red; */
+.delete
+{
+    margin-right:100px; 
 }
 
-span{
-    /* padding: 2px; */
-    /* border: 2px solid black; */
-    cursor: pointer;
+.favourite
+{
+    margin-left:100px;
+}
+
+#my_input
+{
+    width:100px;;
+    margin-bottom: 30px;
 }
